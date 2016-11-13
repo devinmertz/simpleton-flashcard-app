@@ -11,4 +11,5 @@ To run the entire app, navigate to the backend folder and run the server. Nodemo
 
 #### Backend
 The backend folder has its own package.json file and front end node modules must be installed separately.
+* Install backend node modules by running `npm install` inside the backend folder.
 Running the Express server must be done from within the backend folder.
