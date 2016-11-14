@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 var Wordlist = require('../models/wordListModel');
 
 wordListRoute.route('/')
+  // Find word list by user
     .get(function (req, res) {
         Wordlist.find({submitter: req.user._id}, function (err, wordLists) {
             if (err) res.status(500).send(err);
