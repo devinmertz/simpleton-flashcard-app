@@ -1,10 +1,17 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import ReactDOM from "react-dom";
 
-class AppContainer extends Component{
+// import components
+import NavBar from "../components/Navbar";
 
-  render(){
-    return (<h1>Simpleton Main Page</h1>)
+class AppContainer extends Component {
+
+  render() {
+    return (
+    <div>
+      <NavBar/>
+      <h1>Simpleton Main Page</h1>
+    </div>)
   }
 }
 
