@@ -6,11 +6,11 @@ var Category = require('./categoryModel');
 
 var wordlistSchema = new Schema({
   category: {
-    type: Schema.types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "Category",
   },
   flashcards: [{
-    type: Schema.types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: 'Flashcard'
   }],
   submitter: {
@@ -19,4 +19,4 @@ var wordlistSchema = new Schema({
   },
 });
 
-module.exports = mongoose.model('WordList', wordlistSchema );
+module.exports = mongoose.model('WordList', wordlistSchema);
