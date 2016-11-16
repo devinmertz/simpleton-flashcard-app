@@ -1,8 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var User = require('./userModel').schema;
-var Flashcard = require('./flashcardModel');
-var Category = require('./categoryModel');
 
 var wordlistSchema = new Schema({
   category: {
