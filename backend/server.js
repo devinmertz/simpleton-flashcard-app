@@ -11,7 +11,7 @@ var config = require('./config');
 var authRoutes = require('./routes/authRoutes');
 var wordlistRoutes = require('./routes/wordListRoutes');
 
-// mongoose.connect(config.database);
+mongoose.connect(config.database);
 
 app.use(express.static('../frontend/app'));
 app.use(morgan('dev'));
