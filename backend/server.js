@@ -5,6 +5,7 @@ var morgan = require('morgan');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var expressJwt = require('express-jwt');
+var path = require('path');
 var port = process.env.PORT || 9000;
 
 var config = require('./config');
@@ -13,7 +14,7 @@ var wordlistRoutes = require('./routes/wordListRoutes');
 
 mongoose.connect(config.database);
 
-app.use(express.static('../frontend/app'));
+app.use(express.static(path.join(__dirname, '..', 'frontend/app')));
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
