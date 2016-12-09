@@ -13,9 +13,36 @@
 </head>
 <!-- bootstrap app -->
 
-<body ng-app="app">
-	<div ng-controller="MainController as mainCtrl">
-		<ng-view></ng-view>
+<body ng-cloak ng-app="app" layout='column'>
+	<md-toolbar layout="row" class="md-toolbar-tools">
+    <md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()">
+      <md-icon md-svg-icon="menu"></md-icon>
+    </md-button>
+    <h1>Simpleton Speech</h1>
+  </md-toolbar>
+
+	<div ng-controller="MainController as mainCtrl" class='container' layout='row' flex>
+		
+			<md-sidenav md-is-locked-open='true' class='md-whiteframe-4dp'>
+				<md-list>
+					<md-list-item>
+						<md-button>Home</md-button>
+					</md-list-item>
+					<md-list-item>
+						<md-button>My Cards</md-button>
+					</md-list-item>
+					<md-list-item>
+						<md-button>Create</md-button>
+					</md-list-item>
+					<md-list-item>
+						<md-button>Something Else</md-button>
+					</md-list-item>
+				</md-list>
+			</md-sidenav>
+			<md-content id='content'  flex>
+				content
+			</md-content>
+		
 	</div>
 	<!-- angular & angular route -->
 	<script src="node_modules/angular/angular.js"></script>
