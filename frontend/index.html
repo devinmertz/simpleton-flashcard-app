@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Simpleton Speech</title>
+	<!-- angular material css -->
+	<link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css">
+	<!-- custom css -->
+	<link rel="stylesheet" href="styles/styles.css">
+</head>
+<!-- bootstrap app -->
+
+<body ng-cloak ng-app="app" layout='column'>
+	<md-toolbar layout="row" class="md-toolbar-tools">
+		
+		<h1>Simpleton Speech</h1>
+	</md-toolbar>
+
+	<div ng-controller="MainController as mainCtrl" class='container' layout='row' flex>
+
+<!--
+		<md-sidenav md-is-locked-open='true' class='md-whiteframe-4dp'>
+			<md-list>
+				<md-list-item>
+					<md-button>Home</md-button>
+				</md-list-item>
+				<md-list-item>
+					<md-button>My Cards</md-button>
+				</md-list-item>
+				<md-list-item>
+					<md-button>Create</md-button>
+				</md-list-item>
+				<md-list-item>
+					<md-button>Something Else</md-button>
+				</md-list-item>
+			</md-list>
+		</md-sidenav>
+-->
+		<md-content flex layout layout-align="center">
+			<ng-view></ng-view>
+		</md-content>
+
+	</div>
+	<!-- angular & angular route -->
+	<script src="node_modules/angular/angular.js"></script>
+	<script src="node_modules/angular-route/angular-route.js"></script>
+	<!-- angular-material & dependencies -->
+	<script src="node_modules/angular-material/angular-material.js"></script>
+	<script src="node_modules/angular-animate/angular-animate.js"></script>
+	<script src="node_modules/angular-messages/angular-messages.js"></script>
+	<script src="node_modules/angular-aria/angular-aria.js"></script>
+	<!-- app -->
+	<script src="app.js"></script>
+	<!-- config -->
+	<script src="./js/config/config.js"></script>
+	<!-- controllers -->
+	<script src="js/controllers/mainController.js"></script>
+	<script src="js/controllers/authController.js"></script>
+	<!-- services -->
+
+	<!-- directives -->
+
+</body>
+
+</html>
