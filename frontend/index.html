@@ -15,14 +15,13 @@
 
 <body ng-cloak ng-app="app" layout='column'>
 	<md-toolbar layout="row" class="md-toolbar-tools">
-		<md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()">
-			<md-icon md-svg-icon="menu"></md-icon>
-		</md-button>
+		
 		<h1>Simpleton Speech</h1>
 	</md-toolbar>
 
 	<div ng-controller="MainController as mainCtrl" class='container' layout='row' flex>
 
+<!--
 		<md-sidenav md-is-locked-open='true' class='md-whiteframe-4dp'>
 			<md-list>
 				<md-list-item>
@@ -39,8 +38,9 @@
 				</md-list-item>
 			</md-list>
 		</md-sidenav>
-		<md-content id='content' flex>
-			content
+-->
+		<md-content flex layout layout-align="center">
+			<ng-view></ng-view>
 		</md-content>
 
 	</div>
@@ -55,9 +55,10 @@
 	<!-- app -->
 	<script src="app.js"></script>
 	<!-- config -->
-	<script src="/js/config/config.js"></script>
+	<script src="./js/config/config.js"></script>
 	<!-- controllers -->
 	<script src="js/controllers/mainController.js"></script>
+	<script src="js/controllers/authController.js"></script>
 	<!-- services -->
 
 	<!-- directives -->

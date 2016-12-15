@@ -14,6 +14,11 @@
 				controller: 'MainController',
 				controllerAs: 'main'
 			})
+			.when('/login', {
+				templateUrl: './templates/login.tpl.html',
+				controller: 'AuthController',
+				controllerAs: 'auth'
+			})
 			.otherwise('/');
 
 		$mdThemingProvider.theme('default')
